@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {
+          font-size: 12px;
+      }
+      a.webook_book_item {
+        text-decoration: none; cursor: pointer; color: #551a8b; letter-spacing: 0.3px;
+      }
+      a.webook_book_item:hover {
+        color: #212832;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; width: 300px; padding: 0; margin: 0;">
+      <a href="popup.html" style="font-weight: bold; font-size: 14px; letter-spacing: 0.5px; color: #4a4a4a; text-decoration: none;">返回</a>
+        <div style="width: 100%; height: 1px; background-color: #e4e4e4; margin: 10px 0;"></div>
+
+      <div style="display: flex; flex-direction: row;">
+        <div id="pause_player" style="cursor: pointer; color: #259; padding: 5px 0;">暂停播放</div>
+        <div id="resume_player" style="cursor: pointer; color: #259; padding: 5px 0; margin-left: 10px;">继续播放</div>
+        <div id="stop_player" style="cursor: pointer; color: #259; padding: 5px 0; margin-left: 10px;">停止播放</div>
+      </div>
+
+      <div style="display: flex; flex-direction: row; padding: 5px 0;">
+        <div id="voice_player" style="">声音设置：</div>
+        <select id="voice">
+          <option value="zh-CN">zh-CN</option>
+          <option value="zh-HK">zh-HK</option>
+          <option value="zh-TW">zh-TW</option>
+        </select>
+      </div>
+
+      <div style="padding: 5px 0; display: flex; flex-direction: row;">
+        <div >播放速度：</div>
+        <input type="range" min="1" max="30" value="15" id="rate">
+      </div>
+
+      <div style="padding: 5px 0; display: flex; flex-direction: row;">
+        <div >连续播放：</div>
+        <input type="checkbox" id="playalltime" />
+      </div>
+
+      <div style="padding: 5px 0; display: flex; flex-direction: row;">
+        <div id="test_player" style="cursor: pointer; color: #259;">声音测试</div>
+      </div>
+
+      <div style="padding: 5px 0; display: flex; flex-direction: row;">
+        <div style="color: gray;">播放速度最好不要太快，某些声源不能正常播放，可以点击上面”声音测试“来验证声源和播速是否兼容</div>
+      </div>
+
+
+    <script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="setting.js"></script>
+  </body>
+</html>

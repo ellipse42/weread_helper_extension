@@ -1,0 +1,38 @@
+{
+  "name": "微信读书助手 - 开源版",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "查看公众号、管理书架、设置阅读页面 UI",
+  "homepage_url": "https://weread.qq.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "zh_CN",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "src/popup/popup.html"
+  },
+  "permissions": [
+    "storage",
+    "cookies",
+    "webRequest",
+    "webRequestBlocking",
+    "ttsEngine",
+    "tts",
+    "*://i.weread.qq.com/*",
+    "*://weread.qq.com/*",
+    "*://r.qq.com/*",
+    "*://*.file.myqcloud.com/*"
+  ],
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": ["*://weread.qq.com/*"],
+    "js": ["assets/js/jquery.min.js", "assets/js/lodash.min.js", "src/ui.js"]
+  }],
+  "content_security_policy": "script-src 'self' 'sha256-NeK5uABt0EHXknKz0Fuhb7a5Zbb44aQ0yGE+wP/uoBo='; object-src 'self'"
+}

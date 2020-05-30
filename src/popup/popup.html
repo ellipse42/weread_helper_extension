@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {
+        font-size: 12px;
+      }
+      a {
+        text-decoration: none; cursor: pointer;
+      }
+      .divider {
+        width: 100%; height: 1px; background-color: #e4e4e4; margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; width: 300px; padding: 0; margin: 0;">
+      <a href="popup.html" style="font-weight: bold; font-size: 14px; letter-spacing: 0.5px; color: #4a4a4a;">微信读书助手 <span id="version" style="font-weight: normal; color: gray; font-size: 12px; letter-spacing: 0;"></span></a>
+
+      <div class="divider"></div>
+      <div id="webook_user_info"></div>
+
+      <div style="margin-top: 10px; display: flex; flex-direction: column; background-color: #f4f4f4; padding: 10px;">
+        <a href="https://github.com/tenpiece/wereadHelper" style="cursor: pointer; color: #259;" target="_blank">GitHub</a>
+        <hr/>
+        <div id="clearme" style="cursor: pointer; color: #259;">还原全部设置</div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>
